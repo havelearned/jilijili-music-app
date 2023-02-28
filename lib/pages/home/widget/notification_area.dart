@@ -1,15 +1,12 @@
-
-
 import 'package:flutter/material.dart';
 
-import '../theme.dart';
+import '../../../theme.dart';
 
-class Header extends StatelessWidget{
-  const Header({Key? key}) : super(key: key);
+class NotificationArea extends StatelessWidget {
+  const NotificationArea({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.sizeOf(context);
     return Stack(
       children: <Widget>[
@@ -19,7 +16,7 @@ class Header extends StatelessWidget{
             decoration: const BoxDecoration(
                 color: primary,
                 borderRadius:
-                BorderRadius.only(bottomRight: Radius.circular(100))),
+                    BorderRadius.only(bottomRight: Radius.circular(100))),
             child: Container(
               width: size.width,
               height: 80,
@@ -54,7 +51,9 @@ class Header extends StatelessWidget{
                         color: Colors.white,
                         size: 35,
                       ),
-                      const SizedBox(width: 20,),
+                      const SizedBox(
+                        width: 20,
+                      ),
                       Container(
                           width: 40,
                           height: 40,
@@ -64,10 +63,8 @@ class Header extends StatelessWidget{
                           child: Image(
                             width: size.width,
                             height: 240,
-                            // ignore: prefer_const_constructors
-                            image: AssetImage("lib/assets/images/player.png"),
-                          )
-                      ),
+                            image: const AssetImage("assets/images/avatar.png"),
+                          )),
                     ],
                   )
                 ],
@@ -80,11 +77,9 @@ class Header extends StatelessWidget{
               width: size.width,
               height: 240,
               // ignore: prefer_const_constructors
-              image: AssetImage("lib/assets/images/bg.png"),
+              image: AssetImage("assets/images/bg.png"),
             ))
       ],
     );
-
   }
-
 }

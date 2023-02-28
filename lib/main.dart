@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jilijili_music_app/pages/home.dart';
-import 'package:jilijili_music_app/pages/login.dart';
+import 'package:jilijili_music_app/pages/home/home_page.dart';
+import 'package:jilijili_music_app/pages/login/login_page.dart';
 import 'package:jilijili_music_app/theme.dart';
 
 void main() {
@@ -22,8 +22,8 @@ class JilijiliMusic extends StatelessWidget {
       ),
       initialRoute: '/', // 初始路由
       routes: {
-        '/': (context) => const Home(), // 配置页面
-        "/login": (context) => const Login()
+        '/': (context) => const HomePage(), // 配置页面
+        "/login": (context) => const LoginPage()
       },
     );
   }
